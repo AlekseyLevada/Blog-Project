@@ -26,11 +26,16 @@ Frontend: http://localhost:3000
 
 Основные команды
 
-docker-compose up -d => Запуск контейнеров /n
-docker-compose down => 	Остановка контейнеров /n
-docker-compose exec backend php artisan migrate => Выполнить миграции /n
-docker-compose exec backend php artisan db:seed => 	Заполнить БД тестовыми данными /n
-docker-compose logs -f => Просмотр логов в реальном времени /n
+docker-compose up -d => Запуск контейнеров  
+
+docker-compose down => 	Остановка контейнеров  
+
+docker-compose exec backend php artisan migrate => Выполнить миграции  
+
+docker-compose exec backend php artisan db:seed => 	Заполнить БД тестовыми данными  
+
+docker-compose logs -f => Просмотр логов в реальном времени  
+
 docker-compose ps => проверить состояние контейнеров
 
 4. Структура проекта
