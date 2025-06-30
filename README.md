@@ -40,8 +40,12 @@ docker-compose ps => проверить состояние контейнеро�
 
 4. Структура проекта
 
-├── backend/               # Laravel приложение
-├── frontend/              # React приложение
-├── docker-compose.yml     # Конфигурация Docker
-├── nginx.conf             # Конфигурация NGINX
-└── README.md              # Readme.md файл
+├── backend/               # Laravel приложение  
+
+├── frontend/              # React приложение  
+
+├── docker-compose.yml     # Конфигурация Docker  
+
+├── nginx.conf             # Конфигурация NGINX  
+
+└── README.md              # Readme.md файл  
