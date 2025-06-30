@@ -1,0 +1,68 @@
+.app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 20px 0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.mainContent {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animatedPage {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .mainContent {
+    padding: 15px;
+  }
+}

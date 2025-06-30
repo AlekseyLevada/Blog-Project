@@ -1,0 +1,83 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+.addButton {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.addButton:active {
+  transform: translateY(0);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #6e8efb;
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+}

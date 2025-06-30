@@ -1,0 +1,101 @@
+.articleList {
+  display: grid;
+  gap: 25px;
+}
+
+.articleCard {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #6e8efb;
+}
+
+.articleCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.articleTitle {
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.articleTitle a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.articleTitle a:hover {
+  color: #6e8efb;
+}
+
+.articleMeta {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.articleExcerpt {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: 15px;
+  color: #6e8efb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+  color: #a777e3;
+}
+
+.readMore::after {
+  content: '→';
+  margin-left: 5px;
+  transition: margin-left 0.2s ease;
+}
+
+.readMore:hover::after {
+  margin-left: 8px;
+}
+
+.emptyMessage {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.articleCard {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .articleCard {
+    padding: 20px;
+  }
+  
+  .articleTitle {
+    font-size: 1.2rem;
+  }
+}

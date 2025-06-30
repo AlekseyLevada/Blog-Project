@@ -1,0 +1,88 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 4px solid rgba(110, 142, 251, 0.2);
+  border-radius: 50%;
+  border-top-color: #6e8efb;
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 12px;
+}
+
+.notFound {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 1.3rem;
+  color: #e74c3c;
+}
+
+.notFoundIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #e74c3c;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 30px;
+  color: #6e8efb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.backLink:hover {
+  color: #a777e3;
+  text-decoration: underline;
+}
+
+.backLink::before {
+  content: '←';
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Анимация появления контента */
+.contentEnter {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+  
+  .loading {
+    height: 200px;
+  }
+  
+  .notFound {
+    padding: 30px 15px;
+  }
+}

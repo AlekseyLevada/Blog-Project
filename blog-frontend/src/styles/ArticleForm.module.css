@@ -1,0 +1,103 @@
+.formContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 1rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formInput:focus {
+  border-color: #6e8efb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+}
+
+.formTextarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.errorMessage {
+  color: #e74c3c;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animatedForm {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .formTextarea {
+    min-height: 150px;
+  }
+}
